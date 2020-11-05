@@ -1,0 +1,388 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gotu', sans-serif;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+    
+}
+
+p {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(4, 94, 133);
+
+}
+
+/* navbar section */
+
+#navbar-section {
+    width: 100%;
+    border-top: 1px dotted white;
+    border-bottom: 1px dotted white;
+    background-color: rgb(5, 56, 77);
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+#navbar {
+    max-width: 1100px;
+    /* border: 1px solid white; */
+    margin: 0 auto;
+}
+
+#navbar > ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-item {
+    display: inline;
+    padding: 8px 1rem;
+    margin: 0.25rem 0.5rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    padding: 0.25rem 1rem;
+    font-size: 22px;
+}
+
+.nav-item:hover {
+    border-left: white dotted 1px;
+    border-right: white dotted 1px;
+    padding: 8px 15px;
+    font-weight: bold;
+}
+
+/* welcome section */
+
+#welcome-section {
+    width: 100%;
+    height: 94vh;
+    position: relative;
+    background-image: url('https://c8.alamy.com/comp/PF3P27/desktop-source-code-and-technology-background-developer-or-programer-with-coding-and-programming-wallpaper-by-computer-language-and-source-code-com-PF3P27.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.blur {
+    width: 100%;
+    height: 94vh;
+    position: absolute;
+    top: 0px;
+    background-color: black;
+    opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+/* projects section */
+
+#projects {
+    height: 61px;
+    background-color: rgb(5, 56, 77);
+    /* background-color: red; */
+}
+
+#project-section {
+    width: 100%;
+    height: 94vh;
+    /* position: static; */
+    background-color: rgb(5, 56, 77);
+}
+
+#project-text {
+    width: 485px;
+    margin: 0 auto 2rem auto;
+    text-align: center;
+    padding-top: 2rem;
+    border-bottom: 3px solid;
+}
+
+.project-container {
+    width: 1100px;
+    margin: 0 auto;
+    padding: 10rem 25px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, 1fr));
+    grid-template-rows: repeat(autofit, auto);
+    grid-row-gap: 2rem;
+    grid-column-gap: 2rem;
+}
+
+.project-tile {
+    width: 500px;
+    /* height: 200px; */
+    border: 1px solid;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-folder {
+    font-size: 25px;
+    padding: 0;
+    color: black;
+    /* border: solid 1px; */
+}
+
+.code {
+    margin: 0 5px;
+    visibility: hidden;
+}
+
+.project-title-deco {
+    width: 370px;
+    /* border: solid 1px red; */
+}
+
+.project-tile:hover .code {
+    visibility: visible;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.project-tile:hover .project-folder {
+    color: white;
+}
+
+#profile-link {
+    color: white;
+    width: 150px;
+    margin: 0 auto;
+    text-decoration: none;
+    font-size: 20px;
+    border: 1px solid;
+    padding: 2px 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forward-icon {
+    font-size: 25px;
+    margin-left: 1rem;
+    color: black;
+    /* border: solid 1px; */
+}
+
+#profile-link:hover {
+    border: 1px solid black;
+}
+
+#profile-link:hover .forward-icon {
+    color: white;
+}
+
+/* contact section */
+
+#contact {
+    width: 100%;
+    height: 94vh;
+    background-image: linear-gradient(45deg,  rgb(63, 81, 88)45%, rgb(5, 56, 77));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-section-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+    /* border: 1px solid red; */
+}
+
+.contact-section-header > p {
+    color: rgb(4, 40, 56);
+}
+
+.contact-links {
+    width: 600px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 1px solid; */
+    
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-details > i {
+    display: inline-block;
+    width: 25px;
+    /* border: 1px solid; */
+}
+
+.contact-details > span {
+    display: inline-block;
+    width: 130px;
+    /* border: 1px solid; */
+    text-align: center;
+}
+
+.contact-links > a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    /* margin: 0 2px 0 2px; */
+    /* border: 1px solid black; */
+    padding: 2px 1rem;
+}
+
+.contact-links > a:hover {
+    border: 1px solid black;
+    padding: 2px 15px;
+    color: white;
+}
+
+footer > p {
+    border-top: 1px dotted white;
+    border-bottom: 1px dotted white;
+    font-size: 16px;    
+    text-align: center;
+    color: white;
+    background-color: rgb(4, 45, 63);
+}
+
+@media(max-width: 1024px) {
+    
+    .project-container {
+        width: 1000px;
+    }
+    
+    .project-tile {
+        width: 450px;
+    }
+
+}
+
+
+@media(max-width: 768px) {
+     
+    .project-container {
+        width: 700px;
+        padding: 5rem 100px;
+        display: grid;
+        grid-template-columns: repeat(1, minmax(auto, 1fr));
+    }
+
+}
+
+@media(max-width: 500px) {
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+    
+    .nav-item {
+        display: inline;
+        padding: 4px 4px;
+        margin: 0.25rem 4px;
+    }
+    
+    .nav-link {
+        text-decoration: none;
+        color: white;
+        padding: 4px;
+        font-size: 16px !important;
+    }
+
+    .nav-item:hover {
+        border-left: white dotted 1px;
+        border-right: white dotted 1px;
+        padding: 4px 3px;
+        font-weight: bold;
+    }
+
+    .contact-links {
+        width: 300px;
+        height: 80px;
+        display: flex;
+        flex-direction: column; 
+    }
+
+    /* projects section */
+
+    #project-text {
+        width: 300px;
+    }
+
+    .project-container {
+        width: 300px;
+        padding: 1rem 0px 3rem 0px;
+        display: grid;
+        grid-template-columns: repeat(1, minmax(auto, 1fr));
+    }
+
+    .project-tile {
+        width: 300px;
+        border: 1px solid;
+        text-decoration: none;
+        color: white;
+    }
+
+    .project-folder {
+        display: none !important;
+    }
+
+    .project-title-deco {
+        width: 300px;
+        padding: 0px;
+        font-size: 16px !important;
+        /* border: solid 1px red; */
+    }
+
+    .project-tile:hover .code {
+        font-size: 16px;
+    }
+
+    .contact-details {
+        display: flex;
+        flex-direction: row;
+    }
+
+}
