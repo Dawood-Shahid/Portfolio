@@ -12,6 +12,7 @@ h1 {
     font-size: 32px;
     font-weight: bold;
     color: white;
+    margin: 5px 0 10px 0 !important;
 }
 
 h2 {
@@ -29,53 +30,28 @@ p {
 
 /* navbar section */
 
-#navbar-section {
-    width: 100%;
-    border-top: 1px dotted white;
-    border-bottom: 1px dotted white;
-    background-color: rgb(5, 56, 77);
+.nav-container {
     position: sticky;
     top: 0px;
     left: 0px;
-    z-index: 1;
+    z-index: 100;
 }
 
-#navbar {
+.nav-wrapper {
     max-width: 1100px;
-    /* border: 1px solid white; */
-    margin: 0 auto;
+    margin: auto;
+
 }
 
-#navbar > ul {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.nav-item {
-    display: inline;
-    padding: 8px 1rem;
-    margin: 0.25rem 0.5rem;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: white;
-    padding: 0.25rem 1rem;
-    font-size: 22px;
-}
-
-.nav-item:hover {
-    border-left: white dotted 1px;
-    border-right: white dotted 1px;
-    padding: 8px 15px;
-    font-weight: bold;
+.profile {
+    font-size: 28px !important;
 }
 
 /* welcome section */
 
 #welcome-section {
     width: 100%;
-    height: 94vh;
+    height: 92vh;
     position: relative;
     background-image: url('https://c8.alamy.com/comp/PF3P27/desktop-source-code-and-technology-background-developer-or-programer-with-coding-and-programming-wallpaper-by-computer-language-and-source-code-com-PF3P27.jpg');
     background-repeat: no-repeat;
@@ -85,36 +61,57 @@ p {
 
 .blur {
     width: 100%;
-    height: 94vh;
+    height: 92vh;
     position: absolute;
     top: 0px;
     background-color: black;
-    opacity: 0.8;
+    opacity: 0.88;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    text-align: center;
+    align-items: center;
+    /* z-index: 80; */
+}
+
+.profile-image {
+    height: 300px;
+    width: 172px;
+    border-radius: 30px;
+    padding: 5px;
+}
+
+.profile-image > img {
+    height: 285px;
+    border-radius: 30px;
+    position: relative;
+    /* z-index: 90; */
+}
+
+.profile-content {
+    width: 625px;
+    padding: 5px 10px;
+    /* border: red 1px solid; */
+
 }
 
 /* projects section */
 
 #projects {
-    height: 61px;
-    background-color: rgb(5, 56, 77);
-    /* background-color: red; */
+    height: 40px;
 }
 
 #project-section {
     width: 100%;
-    height: 94vh;
+    /* height: 94vh; */
     /* position: static; */
-    background-color: rgb(5, 56, 77);
+    /* background-color: rgb(5, 56, 77); */
+    background-color: #06291ad3;
 }
 
 #project-text {
-    width: 485px;
-    margin: 0 auto 2rem auto;
-    text-align: center;
+    width: 347px;
+    margin: 0 auto 2rem auto !important;
+    /* text-align: center; */
     padding-top: 2rem;
     border-bottom: 3px solid;
 }
@@ -122,14 +119,54 @@ p {
 .project-container {
     width: 1100px;
     margin: 0 auto;
-    padding: 10rem 25px;
+    padding: 3rem 25px;
     text-align: center;
     display: grid;
-    grid-template-columns: repeat(2, minmax(auto, 1fr));
+    grid-template-columns: repeat(3, minmax(auto, 1fr));
     grid-template-rows: repeat(autofit, auto);
     grid-row-gap: 2rem;
     grid-column-gap: 2rem;
 }
+
+.card {
+    border-radius: 10px;
+}
+
+.card:hover {
+    /* border-radius: 10px; */
+    /* border-radius: 16px; */
+    box-shadow: 6px 6px 22px 0px rgba(0,0,0,0.75);
+    /* background: linear-gradient(225deg, #c4d3da, #a5b1b8); */
+    /* box-shadow:  -16px 16px 33px #889996, 16px -16px 33px #004d40; */
+}
+
+.card-image {
+    height: 150px !important;
+}
+
+.card-image > img {
+    height: 150px !important;
+}
+
+.card-content {
+    padding-top: 10px !important;
+}
+
+.card-content > p {
+    font-size: 18px;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .project-tile {
     width: 500px;
