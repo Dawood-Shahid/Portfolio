@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Gotu", sans-serif;
 }
@@ -248,7 +252,3 @@ p {
     flex-direction: row;
   }
 }
-
-
-
-
