@@ -313,17 +313,45 @@ p {
     font-size: 16px;
   }
 
-  .contact-details {
+  /* .contact-details {
     display: flex;
     flex-direction: row;
-  }
+  } */
 
-  .contact-links {
+  /* .contact-links {
   margin: 0 auto;
   margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  } */
+
+  /* .contact-details > span { */
+  /* display: none; */
+  /* width: 95px; */
+  /* margin-left: 5px; */
+  /* } */
+
+  .contact-details {
+    width: 0px;
   }
+
+  .contact-details > span {
+    display: none;
+  }
+
+  .contact-links > a {
+    /* color: black;
+    text-decoration: none;
+    font-size: 20px; */
+    padding: 2px 2rem;
+  }
+
+  .contact-links > a:hover {
+  padding: 2px 2rem 1px 2rem;
+  /* color: #422602; */
+  /* border-bottom: #004d40 1px solid; */
+  }
+
 }
