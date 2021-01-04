@@ -33,6 +33,14 @@ p {
 /* navbar section */
 
 .nav-container {
+  background-image: linear-gradient(
+    to left top,
+    #09203f,
+    #1b3454,
+    #2d4a69,
+    #3f607f,
+    #537895
+  );
   position: sticky;
   top: 0px;
   left: 0px;
@@ -104,7 +112,7 @@ p {
 }
 
 #project-text {
-  color: #004d40;
+  color: #1b3454;
   width: 347px;
   margin: 0 auto 2rem auto !important;
   padding-top: 2rem;
@@ -149,10 +157,21 @@ p {
   text-align: left;
 }
 
+.card-action {
+  background-image: linear-gradient(
+    to left top,
+    #09203f,
+    #1b3454,
+    #2d4a69,
+    #3f607f,
+    #537895
+  );
+}
+
 /* contact section */
 
 #contact-section {
-  border-top: #004d40 1px solid;
+  border-top: #09203f 1px solid;
   background-color: whitesmoke;
   display: flex;
   flex-direction: column;
@@ -161,7 +180,7 @@ p {
 }
 
 #contact-text {
-  color: #004d40;
+  color: #1b3454;
   margin: 0 auto 2rem auto !important;
   padding-top: 2rem;
   border-bottom: 3px solid;
@@ -204,15 +223,21 @@ p {
 
 .contact-links > a:hover {
   padding: 2px 15px 1px 15px;
-  color: #422602;
-  border-bottom: #004d40 1px solid;
+  border-bottom: #09203f 1px solid;
 }
 
 /* footer */
 
 #footer-section {
   margin-bottom: 0;
-  background-color: #004d40;
+  background-image: linear-gradient(
+    to left top,
+    #09203f,
+    #1b3454,
+    #2d4a69,
+    #3f607f,
+    #537895
+  );
 }
 
 #footer {
@@ -349,9 +374,8 @@ p {
   }
 
   .contact-links > a:hover {
-  padding: 2px 2rem 1px 2rem;
-  /* color: #422602; */
-  /* border-bottom: #004d40 1px solid; */
+    padding: 2px 2rem 1px 2rem;
+    /* color: #422602; */
+    /* border-bottom: #004d40 1px solid; */
   }
-
 }
