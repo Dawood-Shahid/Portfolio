@@ -40,7 +40,7 @@ p {
     #2d4a69,
     #3f607f,
     #537895
-  );
+  ) !important;
   position: sticky;
   top: 0px;
   left: 0px;
@@ -112,7 +112,7 @@ p {
 }
 
 #project-text {
-  color: #1b3454;
+  color: #1b3454 !important;
   width: 347px;
   margin: 0 auto 2rem auto !important;
   padding-top: 2rem;
@@ -165,7 +165,7 @@ p {
     #2d4a69,
     #3f607f,
     #537895
-  );
+  ) !important;
 }
 
 /* contact section */
@@ -223,7 +223,7 @@ p {
 
 .contact-links > a:hover {
   padding: 2px 15px 1px 15px;
-  border-bottom: #09203f 1px solid;
+  border-bottom: #09203f 1px solid !important;
 }
 
 /* footer */
@@ -237,7 +237,7 @@ p {
     #2d4a69,
     #3f607f,
     #537895
-  );
+  ) !important;
 }
 
 #footer {
