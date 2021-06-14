@@ -73,22 +73,6 @@ p {
   align-items: center;
 }
 
-.profile-image {
-  height: 215px;
-  width: 180px;
-  margin-top: 3rem;
-  border-radius: 30px;
-  border-radius: 30px;
-  box-shadow: 0px 0px 15px 0px #0ca1bc;
-}
-
-.profile-image > img {
-  height: 215px;
-  width: 100%;
-  border-radius: 30px;
-  position: relative;
-}
-
 .profile-content {
   max-width: 625px;
   padding: 5px 10px;
@@ -117,6 +101,22 @@ p {
   padding: 3rem;
   border-radius: 30px;
   background-color: rgb(39, 39, 39);
+}
+
+.profile-image {
+  height: 215px;
+  width: 180px;
+  margin-top: 3rem;
+  border-radius: 30px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 15px 0px #0ca1bc;
+}
+
+.profile-image > img {
+  height: 215px;
+  width: 100%;
+  border-radius: 30px;
+  position: relative;
 }
 
 .about-text {
@@ -301,8 +301,7 @@ p {
 
 /* media */
 
-@media (max-width: 1024px) {
-  
+@media (max-width: 1100px) {
   .nav-wrapper {
     margin: 0 40px;
   }
@@ -311,22 +310,41 @@ p {
     width: 1000px;
   }
 
-  /* .project-tile {
-        width: 450px;
-    } */
+  .about-content {
+    margin: 10px 10px 0 10px !important;
+    padding-top: 10px  !important;
+    padding-bottom: 10px  !important;
+  }
+
+   .about-text {
+    /* width: 100%; */
+    margin: 10px;
+    padding: 10px 1rem !important;
+    /* background-color: red; */
+  }
+
+  .mapouter {
+    position: relative;
+    text-align: right;
+    width: 100%;
+    height: 380px;
+    border-radius: 10px;
+    /* background-color: green; */
+  }
+
+  .gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    width: 100%;
+    height: 380px;
+    border-radius: 10px;
+  }
 }
 
 /* tablet */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .nav-wrapper {
     margin: 0 40px;
-  }
-
-  .project-container {
-    width: 700px;
-    padding: 5rem 100px;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(auto, 1fr));
   }
 
   /* about section */
@@ -350,8 +368,8 @@ p {
     align-items: center;
     justify-content: center;
     color: white;
-    margin: 10px 1rem 0;
-    padding: 0 1rem;
+    margin: 10px 10px 0 10px !important;
+    padding: 0 0.5rem;
     border-radius: 30px;
     background-color: rgb(39, 39, 39);
     /* background-color:red; */
@@ -419,6 +437,15 @@ p {
     margin-right: 5px;
   }
 
+  /* project section */
+
+  .project-container {
+    width: 700px;
+    padding: 5rem 100px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, 1fr));
+  }
+
   /* contect section */
 
   /* #contect-text {
@@ -470,7 +497,7 @@ p {
     width: 100%;
     height: 380px;
     border-radius: 10px;
-    background-color: green;
+    /* background-color: green; */
   }
 
   .gmap_canvas {
@@ -486,7 +513,7 @@ p {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   h1 {
     font-size: 24px;
   }
@@ -508,6 +535,7 @@ p {
   .nav-wrapper {
     margin: 0;
   }
+
   .nav-wrapper > a {
     display: none;
   }
