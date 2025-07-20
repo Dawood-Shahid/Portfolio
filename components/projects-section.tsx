@@ -11,76 +11,100 @@ export default function ProjectsSection() {
 
   const projects = [
     {
-      title: 'Estenarh - Online Therapy App',
+      title: 'Estenarh',
+      subTitle: ' Online Therapy App',
       description:
-        'A comprehensive mental health platform with therapist search, session booking, secure chat and video calls, and in-app payments. Built with React Native, featuring real-time communication and payment integration.',
-      image: '/placeholder.svg?height=300&width=500',
+        'A licensed mental health app approved by the Ministry of Health, offering private and affordable therapy with certified psychologists. Includes secure chat, voice/video calls, instant booking, and flexible payments.',
+      image: '/estenarh.png',
       technologies: [
         'React Native',
-        'Socket.IO',
-        'Agora SDK',
+        'RTK',
         'HyperPay',
-        'Firebase',
+        'Tabby',
+        'AppsFlyer',
+        'Fastlane',
       ],
-      playStoreLink: '#',
-      appStoreLink: '#',
+      playStoreLink:
+        'https://play.google.com/store/apps/details?id=com.estenarh.app',
+      appStoreLink:
+        'https://apps.apple.com/us/app/estenarh-online-therapy-app/id1529172019',
     },
     {
-      title: 'Estenarh - Consultant',
+      title: 'Estenarh',
+      subTitle: 'For Healthcare Practitioners',
       description:
-        'Extended version of the Estenarh therapy platform with additional consultant features. Enhanced therapist management system with advanced booking capabilities and specialized consultation tools.',
-      image: '/placeholder.svg?height=300&width=500',
+        'A Ministry of Health-approved platform for therapists in Saudi Arabia to offer secure online therapy. Manage schedules, accept session requests, and connect with patients via chat, voice, or video with 24/7 technical support.',
+      image: '/estenarh-consultant.png',
       technologies: [
         'React Native',
+        'React Native Reanimated 2',
         'Socket.IO',
-        'Agora SDK',
-        'HyperPay',
-        'Firebase',
+        'Zoom',
+        'OneSignal',
+      ],
+      playStoreLink:
+        'https://play.google.com/store/apps/details?id=com.consultant.estenarh.app',
+      appStoreLink:
+        'https://apps.apple.com/us/app/estenarh-consultant-app/id1663499493',
+    },
+    {
+      title: 'Pure CSS Loaders Extended',
+      subTitle: 'Open Source Contribution',
+      description:
+        'Pure CSS Loaders Extended is a collection of customizable loading animations built entirely with CSS. It offers a variety of lightweight, responsive loaders that can be easily integrated into any web project. No JavaScript required.',
+      image: 'pure-css-loaders.png',
+      technologies: ['React', 'TypeScript', 'Bootstrap'],
+      githubLink: 'https://github.com/iomechs/pure-css-loaders-extended',
+      demoLink: 'https://pure-css-loaders-extended.netlify.app/#/',
+    },
+    {
+      title: 'Career Connect',
+      subTitle: 'Counselling & Education App',
+      description:
+        'Providing career guidance and educational support for individuals of all age groups.',
+      image: '/career-connect.png',
+      technologies: [
+        'React Native',
+        'Native Base',
+        'Reanimated',
         'Redux',
+        'Redux Most',
       ],
-      playStoreLink: '#',
-      appStoreLink: '#',
+      playStoreLink:
+        'https://play.google.com/store/apps/details?id=club.careerconnect.app&hl=en&gl=US',
+      // appStoreLink: '#',
     },
     {
-      title: 'Pure CSS Loaders',
+      title: 'App Tracker',
+      subTitle: 'Final Year Project',
       description:
-        'An open-source extension of loading.io with dynamic sizes and colors for different loaders. Provides developers with customizable loading animations for web applications.',
-      image: '/placeholder.svg?height=300&width=500',
-      technologies: ['CSS3', 'JavaScript', 'HTML5'],
-      githubLink: '#',
-      demoLink: '#',
-    },
-    {
-      title: 'Career Connect - Counselling & Education App',
-      description:
-        'An educational counselling platform connecting students with career advisors. Features include appointment scheduling, resource sharing, and progress tracking.',
-      image: '/placeholder.svg?height=300&width=500',
-      technologies: ['React Native', 'Firebase', 'Redux', 'REST APIs'],
-      playStoreLink: '#',
-      appStoreLink: '#',
+        'App Tracker is a web application built to monitor and manage project progress, similar to tools like Jira. It enables users to create, assign, and track tasks, ensuring streamlined collaboration and efficient project management.',
+      image: '/fyp.png',
+      technologies: [
+        'React',
+        'Material UI',
+        'Firebase',
+        'Realtime Database',
+        'Authentication',
+      ],
+      githubLink: 'https://github.com/AhmedAli125/app-tracker',
+      demoLink: 'https://project-tracker-f4033.web.app/',
     },
     {
       title: 'Contact Manager',
+      subTitle: 'Personal Project',
       description:
         'A full-stack contact management application with secure user authentication and personalized contact storage. Features real-time CRUD operations with Firebase integration.',
-      image: '/placeholder.svg?height=300&width=500',
+      image: '/contact-manager.png',
       technologies: [
         'React',
+        'axios',
         'Firebase',
-        'Authentication',
         'Realtime Database',
+        'Authentication',
       ],
-      githubLink: '#',
-      demoLink: '#',
-    },
-    {
-      title: 'Todo App',
-      description:
-        'A modern task management application built with React hooks. Features state management, lifecycle handling, and CRUD functionalities with clean, maintainable code architecture.',
-      image: '/placeholder.svg?height=300&width=500',
-      technologies: ['React', 'Hooks', 'Local Storage', 'CSS3'],
-      githubLink: '#',
-      demoLink: '#',
+      githubLink: 'https://github.com/Dawood-Shahid/Contact-Manager',
+      demoLink: 'https://dawood-shahid.github.io/Contact-Manager/login',
     },
   ];
 
@@ -102,30 +126,33 @@ export default function ProjectsSection() {
           </p>
         </motion.div>
 
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+        <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
           {projects.map((project, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              className='rounded-lg overflow-hidden border border-secondary hover:border-accent-alpha transition-all duration-300 hover:transform hover:scale-105'
+              className='rounded-xl overflow-hidden border border-secondary hover:border-accent-alpha transition-all duration-300'
               style={{ backgroundColor: 'rgba(17, 24, 39, 0.5)' }}
             >
               <div className='relative overflow-hidden'>
                 <img
                   src={project.image || '/placeholder.svg'}
                   alt={project.title}
-                  className='w-full h-48 object-cover transition-transform duration-300 hover:scale-110'
+                  className='w-full h-48 object-fill transition-transform duration-300'
                 />
                 <div className='absolute inset-0 gradient-overlay' />
               </div>
 
               <div className='p-6'>
-                <h3 className='text-xl font-bold text-accent mb-3'>
+                <h3 className='text-xl font-bold text-accent'>
                   {project.title}
                 </h3>
-                <p className='text-secondary mb-4 leading-relaxed'>
+                <h5 className=' font-bold text-accent mb-3'>
+                  {project.subTitle}
+                </h5>
+                <p className='text-secondary mb-4 leading-relaxed line-clamp-4'>
                   {project.description}
                 </p>
 
