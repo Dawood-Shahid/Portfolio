@@ -21,12 +21,11 @@ export default function ExperienceSection() {
       location: 'Karāchi, Sindh, Pakistan',
       achievements: [
         'Built and maintained a mental health app with therapist search, booking, chat, video calls, and in-app payments',
-        'Improved app performance by 20% by reducing unnecessary re-renders and optimizing components',
-        'Integrated Agora, Zoom, and Twilio SDKs to enable high-quality video calling',
-        'Developed real-time chat using Socket.IO and Gifted Chat for therapist-user communication',
+        'Improved app performance by 20% by optimizing components',
+        'Integrated Agora and Zoom SDKs to enable high-quality video calling',
+        'Developed real-time chat using Socket.IO for therapist-user communication',
         'Integrated HyperPay and Tabby with save card support for secure in-app payments',
         'Set up OneSignal push notifications, increasing user re-engagement by 15%',
-        'Implemented RTL layout support to improve accessibility for right-to-left languages',
         'Used AppsFlyer and Firebase Analytics for user behavior tracking and insights',
         'Automated builds and deployments with Fastlane to reduce release time',
       ],
@@ -70,7 +69,7 @@ export default function ExperienceSection() {
               initial={{ opacity: 0, x: -50 }}
               animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className='bg-card rounded-lg p-8 border border-secondary hover:border-accent-alpha transition-colors duration-300'
+              className='bg-card rounded-xl p-8 border border-secondary hover:border-accent-alpha transition-colors duration-300'
               style={{ backgroundColor: 'rgba(17, 24, 39, 0.5)' }}
             >
               <div className='flex flex-col md:flex-row md:items-center md:justify-between mb-6'>
