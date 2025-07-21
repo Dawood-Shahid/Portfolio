@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Mail, Phone, Linkedin, FileText } from 'lucide-react';
+import { getCurrentYear } from '@/lib/utils';
 
 export default function ContactSection() {
   const ref = useRef(null);
@@ -104,7 +105,8 @@ export default function ContactSection() {
           className='text-center mt-16 pt-8 border-t border-secondary'
         >
           <p className='text-muted'>
-            © 2024 Dawood Shahid. Built with React, Next.js & Tailwind CSS
+            © {getCurrentYear()} Dawood Shahid. Built with React, Next.js &
+            Tailwind CSS
           </p>
         </motion.div>
       </div>

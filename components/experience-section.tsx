@@ -1,5 +1,6 @@
 'use client';
 
+import { getCurrentYear } from '@/lib/utils';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
@@ -7,7 +8,7 @@ import { useRef } from 'react';
 export default function ExperienceSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
-  const currentYear = new Date().getFullYear();
+  const currentYear = getCurrentYear();
 
   // Calculate total experience in years
   const startYear = 2021; // Starting year of experience
