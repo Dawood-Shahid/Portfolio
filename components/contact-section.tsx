@@ -19,7 +19,7 @@ export default function ContactSection() {
     {
       icon: <Phone className='w-6 h-6' />,
       label: 'Phone',
-      value: '03352411546',
+      value: '+92 3352 411546',
       href: 'tel:03352411546',
     },
     {
