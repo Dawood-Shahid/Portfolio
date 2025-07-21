@@ -38,10 +38,7 @@ export default function Navigation() {
   };
 
   const openResume = () => {
-    window.open(
-      'https://drive.google.com/drive/folders/1T5hvgq_7KQj0YxJyZNGCIEwOndIUPmue',
-      '_blank'
-    );
+    window.open('/Dawood-Shahid-Resume-II.pdf', '_blank');
   };
 
   return (
