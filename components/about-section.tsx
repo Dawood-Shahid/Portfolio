@@ -6,7 +6,6 @@ import { motion } from 'framer-motion';
 export default function AboutSection() {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState('');
-  const [isTyping, setIsTyping] = useState(true);
   const [isDeleting, setIsDeleting] = useState(false);
 
   const texts = [
@@ -48,7 +47,7 @@ export default function AboutSection() {
   return (
     <section
       id='about'
-      className='min-h-screen flex items-center justify-center px-6 pt-20'
+      className='min-h-screen flex items-center justify-center px-4 sm:px-6 pt-24'
     >
       <div className='max-w-4xl mx-auto text-center'>
         <motion.div
@@ -57,10 +56,10 @@ export default function AboutSection() {
           transition={{ duration: 0.8 }}
           className='mb-8'
         >
-          <h1 className='text-5xl md:text-7xl font-bold mb-6 gradient-text'>
+          <h1 className='text-4xl sm:text-5xl md:text-7xl font-bold mb-6 gradient-text'>
             Dawood Shahid
           </h1>
-          <p className='text-xl md:text-2xl text-secondary mb-8 italic'>
+          <p className='text-lg sm:text-xl md:text-2xl text-secondary mb-8'>
             Software Engineer @ IOMechs
           </p>
         </motion.div>
@@ -69,7 +68,7 @@ export default function AboutSection() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className='text-lg md:text-xl text-secondary text-center'
+            className='text-base sm:text-lg md:text-xl text-secondary text-center'
           >
             <span>
               {displayedText}
@@ -90,7 +89,7 @@ export default function AboutSection() {
                 .getElementById('projects')
                 ?.scrollIntoView({ behavior: 'smooth' })
             }
-            className='btn-primary px-8 py-3 rounded-xl transition-colors duration-200 text-lg'
+            className='btn-primary px-8 py-3 rounded-xl transition-colors duration-200 text-base sm:text-lg w-full sm:w-auto'
           >
             Explore My Work
           </button>

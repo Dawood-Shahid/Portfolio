@@ -46,49 +46,54 @@ export default function ExperienceSection() {
   ];
 
   return (
-    <section id='experience' className='py-20 px-6 bg-secondary-alpha'>
+    <section
+      id='experience'
+      className='py-16 sm:py-20 px-4 sm:px-6 bg-secondary-alpha'
+    >
       <div className='max-w-6xl mx-auto'>
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
-          className='text-center mb-16'
+          className='text-center mb-12 sm:mb-16'
         >
-          <h2 className='text-4xl md:text-5xl font-bold mb-4 gradient-text'>
+          <h2 className='text-3xl sm:text-4xl md:text-5xl font-bold mb-4 gradient-text'>
             Experience
           </h2>
-          <p className='text-xl text-secondary'>
+          <p className='text-lg sm:text-xl text-secondary'>
             {totalExperience}+ years of building scalable applications
           </p>
         </motion.div>
 
-        <div className='space-y-12'>
+        <div className='space-y-8 sm:space-y-12'>
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, x: -50 }}
               animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className='bg-card rounded-xl p-8 border border-secondary hover:border-accent-alpha transition-colors duration-300'
+              className='bg-card rounded-xl p-4 sm:p-8 border border-secondary hover:border-accent-alpha transition-colors duration-300'
               style={{ backgroundColor: 'rgba(17, 24, 39, 0.5)' }}
             >
-              <div className='flex flex-col md:flex-row md:items-center md:justify-between mb-6'>
+              <div className='flex flex-col md:flex-row md:items-center md:justify-between mb-4 sm:mb-6'>
                 <div>
-                  <h3 className='text-2xl font-bold text-accent mb-2'>
+                  <h3 className='text-xl sm:text-2xl font-bold text-accent mb-2'>
                     {exp.role}
                   </h3>
-                  <h4 className='text-xl text-secondary mb-2'>{exp.company}</h4>
+                  <h4 className='text-lg sm:text-xl text-secondary mb-2'>
+                    {exp.company}
+                  </h4>
                   <p className='text-muted'>{exp.location}</p>
                 </div>
                 <div className='mt-4 md:mt-0'>
-                  <span className='bg-primary-alpha text-accent px-4 py-2 rounded-full text-sm'>
+                  <span className='bg-primary-alpha text-accent px-4 py-2 rounded-full text-xs sm:text-sm'>
                     {exp.period}
                   </span>
                 </div>
               </div>
 
-              <ul className='space-y-3'>
+              <ul className='space-y-2 sm:space-y-3'>
                 {exp.achievements.map((achievement, achIndex) => (
                   <li key={achIndex} className='flex items-start'>
                     <span className='text-accent mr-3 mt-1'>•</span>

@@ -109,20 +109,20 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <section id='projects' className='py-20 px-6'>
+    <section id='projects' className='py-16 sm:py-20 px-4 sm:px-6'>
       <div className='max-w-6xl mx-auto'>
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
-          className='text-center mb-16'
+          className='text-center mb-12 sm:mb-16'
         >
-          <h2 className='text-4xl md:text-5xl font-bold mb-4 gradient-text'>
+          <h2 className='text-3xl sm:text-4xl md:text-5xl font-bold mb-4 gradient-text'>
             Projects
           </h2>
-          <p className='text-xl text-secondary'>
-            Building solutions that matter
+          <p className='text-lg sm:text-xl text-secondary'>
+            Some of my featured work
           </p>
         </motion.div>
 

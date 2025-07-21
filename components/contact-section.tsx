@@ -32,28 +32,31 @@ export default function ContactSection() {
   ];
 
   const openResume = () => {
-    window.open('/Dawood-Shahid-Resume-II.pdf', '_blank');
+    window.open('/Dawood-Shahid-Resume.pdf', '_blank');
   };
 
   return (
-    <section id='contact' className='py-20 px-6 bg-secondary-alpha'>
+    <section
+      id='contact'
+      className='py-16 sm:py-20 px-4 sm:px-6 bg-secondary-alpha'
+    >
       <div className='max-w-4xl mx-auto'>
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
-          className='text-center mb-16'
+          className='text-center mb-12 sm:mb-16'
         >
-          <h2 className='text-4xl md:text-5xl font-bold mb-4 gradient-text'>
+          <h2 className='text-3xl sm:text-4xl md:text-5xl font-bold mb-4 gradient-text'>
             Let's Connect
           </h2>
-          <p className='text-xl text-secondary'>
+          <p className='text-lg sm:text-xl text-secondary'>
             Ready to bring your ideas to life
           </p>
         </motion.div>
 
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12'>
           {contactInfo.map((contact, index) => (
             <motion.a
               key={index}

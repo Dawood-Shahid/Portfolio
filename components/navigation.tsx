@@ -2,9 +2,11 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { Menu, X } from 'lucide-react';
 
 export default function Navigation() {
   const [activeSection, setActiveSection] = useState('about');
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,6 +33,7 @@ export default function Navigation() {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
+    setMenuOpen(false);
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -38,7 +41,7 @@ export default function Navigation() {
   };
 
   const openResume = () => {
-    window.open('/Dawood-Shahid-Resume-II.pdf', '_blank');
+    window.open('/Dawood-Shahid-Resume.pdf', '_blank');
   };
 
   return (
@@ -51,7 +54,7 @@ export default function Navigation() {
       }}
       className='fixed top-0 left-0 right-0 z-50 backdrop-blur-sm border-b'
     >
-      <div className='max-w-6xl mx-auto px-6 py-4'>
+      <div className='max-w-6xl mx-auto px-4 sm:px-6 py-4'>
         <div className='flex justify-between items-center'>
           <motion.div
             initial={{ opacity: 0 }}
@@ -61,7 +64,8 @@ export default function Navigation() {
             Dawood Shahid
           </motion.div>
 
-          <div className='flex items-center space-x-8'>
+          {/* Desktop nav */}
+          <div className='hidden md:flex items-center space-x-8'>
             {['about', 'experience', 'projects', 'contact'].map((section) => (
               <button
                 key={section}
@@ -80,7 +84,42 @@ export default function Navigation() {
               View Resume
             </button>
           </div>
+
+          {/* Mobile hamburger */}
+          <button
+            className='md:hidden p-2 rounded focus:outline-none text-secondary'
+            onClick={() => setMenuOpen((v) => !v)}
+            aria-label='Toggle menu'
+          >
+            {menuOpen ? (
+              <X className='w-6 h-6' />
+            ) : (
+              <Menu className='w-6 h-6' />
+            )}
+          </button>
         </div>
+        {/* Mobile menu */}
+        {menuOpen && (
+          <div className='md:hidden mt-4 flex flex-col space-y-4 bg-primary rounded-xl p-4 shadow-lg'>
+            {['about', 'experience', 'projects', 'contact'].map((section) => (
+              <button
+                key={section}
+                onClick={() => scrollToSection(section)}
+                className={`capitalize text-left transition-colors duration-200 hover:text-accent ${
+                  activeSection === section ? 'text-accent' : 'text-secondary'
+                }`}
+              >
+                {section}
+              </button>
+            ))}
+            <button
+              onClick={openResume}
+              className='btn-primary px-4 py-2 rounded-xl transition-colors duration-200 w-full'
+            >
+              View Resume
+            </button>
+          </div>
+        )}
       </div>
     </motion.nav>
   );
