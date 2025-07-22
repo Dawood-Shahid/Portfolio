@@ -74,38 +74,6 @@ export default function ProjectsSection() {
         'https://play.google.com/store/apps/details?id=club.careerconnect.app&hl=en&gl=US',
       // appStoreLink: '#',
     },
-    {
-      title: 'App Tracker',
-      subTitle: 'Final Year Project',
-      description:
-        'App Tracker is a web application built to monitor and manage project progress, similar to tools like Jira. It enables users to create, assign, and track tasks, ensuring streamlined collaboration and efficient project management.',
-      image: '/fyp.png',
-      technologies: [
-        'React',
-        'Material UI',
-        'Firebase',
-        'Realtime Database',
-        'Authentication',
-      ],
-      githubLink: 'https://github.com/AhmedAli125/app-tracker',
-      demoLink: 'https://project-tracker-f4033.web.app/',
-    },
-    {
-      title: 'Contact Manager',
-      subTitle: 'Personal Project',
-      description:
-        'A full-stack contact management application with secure user authentication and personalized contact storage. Features real-time CRUD operations with Firebase integration.',
-      image: '/contact-manager.png',
-      technologies: [
-        'React',
-        'axios',
-        'Firebase',
-        'Realtime Database',
-        'Authentication',
-      ],
-      githubLink: 'https://github.com/Dawood-Shahid/Contact-Manager',
-      demoLink: 'https://dawood-shahid.github.io/Contact-Manager/login',
-    },
   ];
 
   return (
