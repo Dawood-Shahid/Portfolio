@@ -14,7 +14,7 @@ export default function ContactSection() {
     {
       icon: <Mail className='w-6 h-6' />,
       label: 'Email',
-      value: 'dawoodshahid67@gmail.com',
+      value: 'dawoodshahid67',
       href: 'mailto:dawoodshahid67@gmail.com',
     },
     {
@@ -62,7 +62,7 @@ export default function ContactSection() {
           </p>
         </motion.div>
 
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12'>
+        <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12'>
           {contactInfo.map((contact, index) => (
             <motion.a
               key={index}
