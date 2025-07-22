@@ -59,7 +59,7 @@ export default function AboutSection() {
           <h1 className='text-4xl sm:text-5xl md:text-7xl font-bold mb-6 gradient-text'>
             Dawood Shahid
           </h1>
-          <p className='text-lg sm:text-xl md:text-2xl text-secondary mb-8'>
+          <p className='text-xl md:text-2xl text-secondary mb-8 italic'>
             Software Engineer @ IOMechs
           </p>
         </motion.div>

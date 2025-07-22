@@ -4,7 +4,7 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Dawood Shahid - Software Engineer',
   description:
-    'Portfolio of Dawood Shahid, a skilled Software Engineer specializing in modern web and mobile development.',
+    "I'm Dawood Shahid, a software engineer passionate about building modern web and mobile applications.",
   generator: 'Next.js',
 };
 
@@ -15,6 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
+      <head>
+        <link rel='icon' href='/favicon.png' />
+      </head>
       <body>{children}</body>
     </html>
   );
