@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Mail, Phone, Linkedin, FileText } from 'lucide-react';
+import { Mail, Phone, Linkedin, FileText, Github } from 'lucide-react';
 import { getCurrentYear } from '@/lib/utils';
 
 export default function ContactSection() {
@@ -28,6 +28,12 @@ export default function ContactSection() {
       label: 'LinkedIn',
       value: 'dev-dawood-shahid',
       href: 'https://www.linkedin.com/in/dev-dawood-shahid',
+    },
+    {
+      icon: <Github className='w-6 h-6' />,
+      label: 'GitHub',
+      value: 'Dawood-Shahid',
+      href: 'https://github.com/Dawood-Shahid',
     },
   ];
 
@@ -61,24 +67,28 @@ export default function ContactSection() {
             <motion.a
               key={index}
               href={contact.href}
-              target={contact.label === 'LinkedIn' ? '_blank' : undefined}
+              target={
+                contact.label === 'LinkedIn' || 'GitHub' ? '_blank' : undefined
+              }
               rel={
-                contact.label === 'LinkedIn' ? 'noopener noreferrer' : undefined
+                contact.label === 'LinkedIn' || 'GitHub'
+                  ? 'noopener noreferrer'
+                  : undefined
               }
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className='rounded-xl p-6 border border-secondary hover:border-accent-alpha transition-all duration-300 hover:transform hover:scale-105 text-center group'
+              className='rounded-xl p-6 border border-secondary hover:border-accent-alpha transition-all duration-300 text-center group'
               style={{ backgroundColor: 'rgba(17, 24, 39, 0.5)' }}
             >
-              <div className='flex justify-center mb-4'>
+              <div className='flex  items-center justify-center mb-4 gap-4'>
                 <div className='p-3 bg-primary-alpha rounded-full text-accent group-hover:opacity-80 transition-opacity duration-300'>
                   {contact.icon}
                 </div>
+                <h3 className='text-lg font-semibold text-secondary'>
+                  {contact.label}
+                </h3>
               </div>
-              <h3 className='text-lg font-semibold text-secondary mb-2'>
-                {contact.label}
-              </h3>
               <p className='text-accent group-hover:opacity-80 transition-opacity duration-300'>
                 {contact.value}
               </p>
