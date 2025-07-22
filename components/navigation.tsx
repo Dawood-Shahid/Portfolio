@@ -4,13 +4,14 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
+const sections = ['about', 'experience', 'projects', 'contact'] as const;
+
 export default function Navigation() {
   const [activeSection, setActiveSection] = useState('about');
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['about', 'experience', 'projects', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -32,7 +33,9 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
+  const scrollToSection = (
+    sectionId: (typeof sections)[number] // TypeScript type for the sections
+  ) => {
     setMenuOpen(false);
     const element = document.getElementById(sectionId);
     if (element) {
@@ -70,7 +73,7 @@ export default function Navigation() {
 
           {/* Desktop nav */}
           <div className='hidden md:flex items-center space-x-8'>
-            {['about', 'experience', 'projects', 'contact'].map((section) => (
+            {sections.map((section) => (
               <button
                 key={section}
                 onClick={() => scrollToSection(section)}
@@ -105,7 +108,7 @@ export default function Navigation() {
         {/* Mobile menu */}
         {menuOpen && (
           <div className='md:hidden mt-4 flex flex-col space-y-4 bg-primary rounded-xl p-4 shadow-lg'>
-            {['about', 'experience', 'projects', 'contact'].map((section) => (
+            {sections.map((section) => (
               <button
                 key={section}
                 onClick={() => scrollToSection(section)}
