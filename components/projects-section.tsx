@@ -30,7 +30,7 @@ export default function ProjectsSection() {
         'https://apps.apple.com/us/app/estenarh-online-therapy-app/id1529172019',
     },
     {
-      title: 'Estenarh',
+      title: 'Estenarh Consultant',
       subTitle: 'For Healthcare Practitioners',
       description:
         'A Ministry of Health-approved platform for therapists in Saudi Arabia to offer secure online therapy. Manage schedules, accept session requests, and connect with patients via chat, voice, or video with 24/7 technical support.',
