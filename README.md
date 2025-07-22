@@ -38,9 +38,11 @@ This is my personal portfolio website. I use it to showcase my professional back
 
 ## Screenshots
 
-| Home / About                           | Projects                                    |
-| -------------------------------------- | ------------------------------------------- |
-| ![Home Screenshot](public/profile.png) | ![Projects Screenshot](public/estenarh.png) |
+| Projects                                               |
+| ------------------------------------------------------ |
+| ![Projects Screenshot](public/estenarh.png)            |
+| ![Projects Screenshot](public/estenarh-consultant.png) |
+| ![Projects Screenshot](public/pure-css-loaders.png)    |
 
 ---
 
