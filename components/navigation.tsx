@@ -59,9 +59,13 @@ export default function Navigation() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className='text-xl font-bold text-primary'
+            className='flex items-center'
           >
-            Dawood Shahid
+            <img
+              src='/profile.png'
+              alt='Dawood Shahid profile picture'
+              className='w-10 h-10 rounded-full '
+            />
           </motion.div>
 
           {/* Desktop nav */}
