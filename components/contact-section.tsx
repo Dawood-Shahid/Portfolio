@@ -120,6 +120,11 @@ export default function ContactSection() {
           <p className='text-muted'>
             © {getCurrentYear()} Dawood Shahid. Built with React, Next.js &
             Tailwind CSS
+            <br />
+            All Rights Reserved.
+            <br />
+            The Estenarh, Estenarh Consultant, and Career Connect logos and
+            images are trademarks of their respective owners.
           </p>
         </motion.div>
       </div>
