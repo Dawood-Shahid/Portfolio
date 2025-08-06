@@ -18,7 +18,7 @@ export default function ExperienceSection() {
     {
       company: 'IOMechs',
       role: 'Software Engineer',
-      period: 'February 2022 - Present (3 years 6 months)',
+      period: 'February 2022 - July 2024 (3 years 6 months)',
       location: 'Karāchi, Sindh, Pakistan',
       achievements: [
         'Built and maintained a mental health app with therapist search, booking, chat, video calls, and in-app payments',
