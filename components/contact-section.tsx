@@ -123,8 +123,7 @@ export default function ContactSection() {
             <br />
             All Rights Reserved.
             <br />
-            The Estenarh, Estenarh Consultant, and Career Connect logos and
-            images are trademarks of their respective owners.
+            Brand logos used are trademarks of their respective owners.
           </p>
         </motion.div>
       </div>
